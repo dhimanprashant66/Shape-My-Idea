@@ -1,0 +1,106 @@
+Copy everything after this line into a chat, then add your epic or idea under the input section at the end. For reusable setup, paste the workflow into the platform's project or assistant instructions if available.
+
+# Shape an Epic into Features, BRD, and PRD
+
+Turn an idea into an actionable feature breakdown, establish the business requirements, then derive the product requirements. Preserve a clear chain from business need to testable behavior. Support the complete workflow or only the stage the user requests.
+
+## Establish context
+
+Read supplied briefs, research, requirements, and templates before asking questions. Identify the problem, target users, desired outcomes, current workflow, constraints, and scope. Ask a small batch of high-impact questions only where answers materially change scope or behavior. Continue drafting independent sections while questions remain open.
+
+Separate confirmed facts, proposed choices, assumptions, and open questions. Do not invent research, metrics, budgets, commitments, legal obligations, approvals, or technical capabilities. Label suggested targets as proposals and unknown values as TBD. If the idea is sparse, produce a provisional draft with visible assumptions rather than presenting it as implementation-ready.
+
+Follow an organization-provided template when available, preserving the content and traceability described here. Use neutral terminology unless a product or domain is supplied.
+
+## Decompose the idea
+
+1. State the problem, user, outcome, and epic boundary in a short epic brief. Separate requested solutions from the underlying need.
+2. Map the main user journey and identify capabilities needed to complete it.
+3. Split capabilities into independently understandable, demonstrable, testable features. Prefer vertical slices that deliver user value; keep infrastructure enablers separate and link them to the features they enable. Avoid splitting only into UI, API, and database work.
+4. For each feature, record ID, short name, user/problem, value, concise behavior, boundaries, proposed priority with rationale, dependencies, acceptance outline, and MVP/later disposition. Use relative size only when useful and mark it provisional; do not fabricate story points, delivery dates, or team capacity.
+5. Split oversized features by workflow step, user segment, business-rule variation, or smallest useful happy path plus necessary failure handling. Do not force an arbitrary feature count.
+6. Propose the smallest coherent end-to-end MVP, including essential permissions, failure handling, and enabling dependencies. Explain deferred scope and tradeoffs. Use MoSCoW by default; use RICE only when credible inputs exist.
+
+Present the feature map as a table. Expand selected features into user stories when that makes implementation clearer; do not confuse features with engineering tasks.
+
+## Draft the BRD, then the PRD
+
+Use the document structures below. Create the BRD around business outcomes, processes, scope, rules, and business acceptance. Derive the PRD from that BRD and the selected features, describing product behavior, interactions, data, and verifiable acceptance criteria. Avoid duplicating the BRD as the PRD.
+
+For a full-workflow request, produce both sequentially without imposing a new approval gate. Carry unresolved BRD decisions into the PRD as explicit assumptions or blockers. If the user requests a checkpoint or existing governance requires one, honor it. Never imply stakeholder approval from the act of drafting.
+
+Use stable IDs: E-001 for epics, F-001 for features, BR-001 for business requirements, FR-001 for functional requirements, NFR-001 for nonfunctional requirements, and AC-001 for acceptance criteria. Preserve existing IDs on updates; never renumber merely for presentation. Link multiple requirements where appropriate, and mark intentionally deferred or non-product business requirements explicitly.
+
+Write requirements as single, unambiguous statements. Include actor, trigger, observable behavior, and relevant conditions. Give each functional requirement testable criteria, including meaningful negative cases. Specify measurable nonfunctional thresholds only when confirmed or clearly proposed. Avoid terms such as fast, seamless, or secure without an operational definition.
+
+## Check consistency and deliver
+
+- Verify every in-scope feature maps to business requirements and product requirements; verify functional requirements map to acceptance criteria.
+- Check for conflicting scope, missing dependencies, orphan requirements, duplicate features, and requirements disguised as assumptions.
+- Check relevant empty/error states, permissions, alternate flows, data lifecycle, accessibility, analytics, and rollout needs. Scale depth to the product; explain genuinely inapplicable sections briefly.
+- List unresolved decisions with impact and suggested owner role; distinguish blockers from nonblocking questions. Use role placeholders when owners are unknown.
+- Label documents Draft unless approval is evidenced. Include version, date, source inputs, and a concise revision history. For changes, update the feature map, BRD, PRD, and traceability together and summarize affected IDs.
+
+Deliver the feature breakdown, BRD, PRD, and a traceability matrix as requested. For the complete workflow, default to two separate editable documents with the feature breakdown and matrix included as appendices. Create editable files when supported and requested; if files cannot be created, provide clearly separated copy-ready content and explain the limitation. Do not create Jira issues, publish documents, or message stakeholders unless requested.
+
+End with a brief statement of readiness and the most consequential unresolved decisions. Do not call a draft approved or engineering-ready while material behavior remains undefined.
+
+# BRD and PRD structures
+
+Use these as adaptable structures, not empty forms. Keep the business and product views distinct and retain stable requirement IDs across both.
+
+## Business Requirements Document
+
+1. Document control: title, version, date, Draft status, author/owner if known, source inputs, revision history, and reviewer/approver roles. Leave approval status pending unless evidenced.
+2. Executive summary: problem, proposed initiative, business value, and major scope boundaries.
+3. Background and current state: current process, pain points, evidence, and affected user/stakeholder groups.
+4. Objectives and success measures: objective ID, metric definition, baseline, target, measurement window, data source, and owner. Mark unknowns TBD and proposed targets explicitly.
+5. Scope: in scope, out of scope, MVP versus later, affected processes/systems, and constraints.
+6. Stakeholders and users: role, need, responsibility, and decision authority where known.
+7. Future business process: expected workflow, handoffs, exceptions, and operational impact. Add a diagram only when it clarifies complexity.
+8. Business requirements table: BR ID, requirement, rationale/source, linked objective, priority, business acceptance condition, and owner role.
+9. Business rules: eligibility, policies, calculations, approval conditions, and exceptions. Distinguish confirmed rules from proposed ones.
+10. Assumptions, dependencies, constraints, risks, and open decisions: include impact, mitigation or next step, and owner role where useful.
+11. Business acceptance and review: outcome-based acceptance conditions, review responsibilities, and pending decisions. Do not fabricate sign-off.
+12. Appendices: feature map and traceability matrix, glossary, and source references as useful.
+
+Keep architecture and detailed interaction specifications in the PRD or linked engineering design. Record business constraints on technology in the BRD when they genuinely exist.
+
+## Product Requirements Document
+
+1. Document control: version, date, Draft status, linked BRD version, source inputs, and revision history.
+2. Product context: problem, goals, non-goals, target users, use cases, and linked business objectives.
+3. Release scope: included feature IDs, MVP boundary, deferred capabilities, and dependencies. Use proposed sequencing rather than invented dates.
+4. User journeys and flows: triggers, preconditions, normal steps, alternate paths, and completion outcomes. Include permissions and entry/exit points where relevant.
+5. Feature specifications: F ID, concise description, linked BR IDs, actor, priority rationale, dependencies, user stories where useful, and requirements.
+6. Functional requirements table: FR ID, F ID, BR ID(s), behavior, business rules, priority, and AC IDs. Cover relevant validation, states, permissions, and exception behavior.
+7. UX and content: screens/states, navigation, interaction rules, accessibility behavior, notifications, and existing design links. Mark new designs as proposed.
+8. Data and integrations: key entities/fields, requiredness and validation, sources, ownership, access, retention/deletion needs, integration behavior, and failure/recovery handling. Flag unconfirmed contracts; avoid inventing endpoints or schemas as facts.
+9. Nonfunctional requirements: NFR ID, category, requirement, threshold or clearly marked proposed threshold, rationale/source, and verification method. Consider performance, availability, security/privacy, accessibility, and observability in proportion to scope. Do not claim compliance without evidence.
+10. Acceptance criteria: AC ID, linked FR/NFR and feature, Given/When/Then or equivalent testable conditions, and observable result. Cover material happy paths, boundaries, invalid input, unauthorized actions, and recovery paths.
+11. Measurement: events or signals, trigger definition, useful properties, metric link, and data minimization considerations. Keep business outcomes distinct from operational telemetry.
+12. Release and validation: UAT scope, dependencies, migration/rollout/rollback needs when relevant, release acceptance conditions, risks, and open decisions. Identify engineering estimates as pending when unavailable.
+13. Traceability and glossary.
+
+## Traceability matrix
+
+Use columns: Objective | BR ID | Epic ID | Feature ID | FR/NFR ID | AC ID | MVP/later | Status/open dependency.
+
+Represent many-to-many relationships explicitly. Mark deferred business requirements as deferred rather than inventing implementation coverage. For a non-product business requirement, record its operational owner or pending work instead of forcing an FR link. Keep NFR coverage visible, including shared NFRs that apply to several features.
+
+## Example of the distinction
+
+For an invoice approval initiative:
+
+- Business requirement BR-001: Route invoices above the confirmed approval threshold to an authorized approver before payment release. Threshold: TBD.
+- Feature F-001: Submit an invoice for approval; link BR-001.
+- Functional requirement FR-001: When a valid invoice exceeds the configured threshold, place it in Pending Approval and route it to an eligible approver. Unresolved: approver selection and fallback if none exists.
+- Acceptance criterion AC-001: Given a configured threshold and an eligible approver, when an above-threshold invoice is submitted, then it appears in that approver's queue with Pending Approval status and payment release remains blocked.
+
+Treat this as an illustration, not a default product rule. Do not hide unresolved threshold, equality behavior, routing, or permissions behind a claim of readiness.
+
+## My product idea or epic
+
+[Describe the idea, who it serves, the problem, and any known constraints. Share existing requirements or a preferred template if available.]
+
+Requested output: feature breakdown, MVP recommendation, BRD, PRD, and traceability matrix.
