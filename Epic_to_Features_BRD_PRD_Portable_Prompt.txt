@@ -1,5 +1,3 @@
-Copy everything after this line into a chat, then add your epic or idea under the input section at the end. For reusable setup, paste the workflow into the platform's project or assistant instructions if available.
-
 # Shape an Epic into Features, BRD, and PRD
 
 Turn an idea into an actionable feature breakdown, establish the business requirements, then derive the product requirements. Preserve a clear chain from business need to testable behavior. Support the complete workflow or only the stage the user requests.
