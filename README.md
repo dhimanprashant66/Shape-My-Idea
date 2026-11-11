@@ -4,9 +4,19 @@ A reusable prompt for product managers who want to break a large epic or product
 
 ## Quick start
 
-1. [Open the portable prompt](./Epic_to_Features_BRD_PRD_Portable_Prompt.txt) and copy the workflow.
-2. Paste it into ChatGPT, Claude, or your preferred AI chat.
-3. Replace the placeholder under **My product idea or epic** with your idea and any known constraints. Send the prompt.
+## Install the Epic Docs skill
+
+1. [Download the skill ZIP](./shape-epic-to-brd-prd.zip). Keep it zipped.
+2. Upload it in your AI platform:
+   - **Claude:** Go to **Customize → Skills** and choose **Upload a skill**.
+   - **ChatGPT:** If your workspace supports native Skills, go to
+     **Plugins → Skills → Create → Upload from your computer**.
+3. Enable the skill, start a new chat, and type **Epic Docs** followed by your idea.
+
+Example: **Epic Docs. We want customers to report equipment faults and track their resolution.**
+
+The skill asks focused questions if it needs more context, then delivers the
+feature breakdown, MVP, BRD, PRD, and proposed wireframes together. prompt.
 
 ## What you'll get
 
