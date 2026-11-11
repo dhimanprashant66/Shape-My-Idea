@@ -1,4 +1,4 @@
-Shape My Idea
+Shape My Idea:
 Shape My Idea helps product managers pressure-test a product idea, break it into
 smaller features, and turn the agreed scope into a Business Requirements
 Document (BRD) and Product Requirements Document (PRD).
