@@ -2,17 +2,15 @@ Shape My Idea:
 Shape My Idea helps product managers pressure-test a product idea, break it into
 smaller features, and turn the agreed scope into a Business Requirements
 Document (BRD) and Product Requirements Document (PRD).
-Install and start
-1. [Download the skill ZIP](./shape-epic-to-brd-prd.zip). Keep it zipped.
-2. Upload it to your AI platform:
-   - Claude: Go to Customize → Skills and select Upload a skill.
-   - ChatGPT: If your workspace supports native Skills, go to
-     Plugins → Skills → Create → Upload from your computer.
-3. Enable Shape My Idea and open a new chat. If you installed an earlier
-   version, update it with the latest ZIP.
-4. Type Shape my idea followed by your product idea. If the skill doesn't
-   start automatically, select it from your platform's skill picker, if available.
-Shape my idea: We want customers to report machine faults and track their
+Start with one Markdown file
+1. Open [SKILL.md](./SKILL.md). It contains the full workflow and both document templates.
+2. Copy the entire file into a new AI chat or your assistant's instructions.
+3. Type Shape my idea followed by your product idea.
+If your platform accepts standalone Markdown skill files, import the same
+SKILL.md there. If its native installer requires a ZIP, such as Claude's
+custom skill uploader, use the Markdown in chat or use the
+[ZIP for native installation](./shape-epic-to-brd-prd.zip).
+Shape my idea: We want customers to report equipment faults and track their
 resolution. Support agents need to triage reports, and we haven't agreed
 on response-time targets yet.
 
